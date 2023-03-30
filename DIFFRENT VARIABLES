@@ -1,0 +1,55 @@
+//SPDX-License-Identifier:UNLICENSED
+pragma solidity ^0.8.0;
+
+contract SimpleContract {
+    // Declare four different types of variables
+    uint256 private age;
+    string private name;
+    bool private isStudent;
+    address private owner;
+
+    // Set function for age variable
+    function setAge(uint256 _age) public {
+        age = _age;
+    }
+
+    // Get function for age variable
+    function getAge() public view returns (uint256) {
+        return age;
+    }
+
+    // Set function for name variable
+    function setName(string memory _name) public {
+        name = _name;
+    }
+
+    // Get function for name variable
+    function getName() public view returns (string memory) {
+        return name;
+    }
+
+    // Set function for isStudent variable
+    function setIsStudent(bool _isStudent) public {
+        isStudent = _isStudent;
+    }
+
+    // Get function for isStudent variable
+    function getIsStudent() public view returns (bool) {
+        return isStudent;
+    }
+
+    // Set function for owner variable
+    function setOwner(address _owner) public {
+        owner = _owner;
+    }
+
+    // Get function for owner variable
+    function getOwner() public view returns (address) {
+        return owner;
+    }
+    
+    // A function to return all the values of the four variables at once
+    function getAllValues() public view returns (uint256, string memory, bool, address) {
+        return (age, name, isStudent, owner);
+    }
+}
